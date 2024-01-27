@@ -75,6 +75,7 @@ export const Cache = <TCacheType extends string | number | boolean>({
   log,
   onError,
   max = 1000,
+  defaultValue,
   save = {},
 }: Options<TCacheType> = {}) => {
   /**
@@ -120,7 +121,7 @@ export const Cache = <TCacheType extends string | number | boolean>({
   }
 
   return {
-    get: (key: KeyPart | KeyPart[]) => cache.get(flat(key)) ?? "",
+    get: (key: KeyPart | KeyPart[]) => cache.get(flat(key)) ?? defaultValue,
     has: (key: KeyPart | KeyPart[]) => cache.has(flat(key)),
     set: (key: KeyPart | KeyPart[], value: TCacheType) =>
       cache.set(flat(key), value),

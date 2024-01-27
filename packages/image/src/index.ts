@@ -16,6 +16,20 @@ export const downloadAsArrayBuffer = async (url: string) => {
 };
 
 /**
+ * Download an image from a URL and return it as base64 string
+ * @param url URL to download
+ * @returns base64 string of the image
+ */
+export const downloadAsBase64 = async (url: string) => {
+  const res = await fetch(url);
+  const buffer = await res.arrayBuffer();
+  if (res.ok) {
+    return toBase64(buffer, res.headers.get("content-type") || "image/png");
+  }
+  return null;
+};
+
+/**
  * Convert an ArrayBuffer to a base64 string
  * @param buffer The ArrayBuffer to convert
  * @param type The mime type of the image

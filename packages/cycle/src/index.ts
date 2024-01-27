@@ -7,11 +7,6 @@
 export const mod = (a: number, b: number) => ((a % b) + b) % b;
 
 /**
- * Extract the type of the output of the next item
- */
-type OutputType<T> = T extends Record<string, unknown> ? T[keyof T] : T;
-
-/**
  * Extract the type of the current item
  */
 type CurrentType<T> = T extends Record<string, unknown> ? T[keyof T] : T;
@@ -39,5 +34,5 @@ export const cycle = <const TItem, TCurrent extends CurrentType<TItem>>(
   const idx = Math.max(0, !current ? 0 : keys.indexOf(current));
   return available[
     mod(idx + (options.direction === "right" ? 1 : -1), available.length)
-  ] as OutputType<TItem>;
+  ] as TItem;
 };
