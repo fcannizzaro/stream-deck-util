@@ -4,7 +4,7 @@
   "version": "1.0.1",
   "scripts": {
     "build": "turbo build",
-    "publish": "turbo publish"
+    "publish:package": "turbo publish:package"
   },
   "devDependencies": {
     "prettier": "^3.2.4",
