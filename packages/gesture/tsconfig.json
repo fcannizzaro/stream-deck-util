@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "declaration": true,
   },
-  "extends": "@tsconfig/node20"
+  "extends": "@tsconfig/node20",
 }
