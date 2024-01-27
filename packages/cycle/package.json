@@ -10,9 +10,12 @@
     "stream-deck-plugin",
     "cycle"
   ],
+  "repository": {
+    "url": "git+https://github.com/fcannizzaro/stream-deck-util.git"
+  },
   "scripts": {
     "build": "tsc",
-    "publish": "npm publish --provenance"
+    "publish": "npm publish --provenance --access public"
   },
   "author": "fcannizzaro",
   "license": "MIT",
