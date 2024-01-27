@@ -1,5 +1,4 @@
 import fs from "fs";
-import mime from "mime-types";
 
 /**
  * Download an image from a URL and return it as ArrayBuffer
@@ -58,8 +57,9 @@ export const readAsArrayBuffer = (path: string) => {
  */
 export const readAsBase64 = (path: string) => {
   const file = fs.readFileSync(path, null);
+  const parts = path.split(".");
   return toBase64(
     file.buffer.slice(file.byteOffset, file.byteOffset + file.byteLength),
-    mime.lookup(path) || "image/png"
+    `image/${parts.at(-1)}`
   );
 };

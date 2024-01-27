@@ -21,10 +21,6 @@
   "license": "MIT",
   "devDependencies": {
     "@tsconfig/node20": "^20.1.2",
-    "@types/mime-types": "^2.1.4",
     "@types/node": "^20.11.7"
-  },
-  "dependencies": {
-    "mime-types": "^2.1.35"
   }
 }
