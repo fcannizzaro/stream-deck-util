@@ -21,6 +21,6 @@ jobs:
           for d in packages/* ; do
             jq ".version = "$version"" $d/package.json > $d/package.tmp && mv $d/package.tmp $d/package.json
           done
-      - run: pnpm run publish
+      - run: pnpm run publish:package
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
