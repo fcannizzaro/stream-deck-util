@@ -1,0 +1,27 @@
+{
+  "name": "@fcannizzaro/stream-deck-image",
+  "version": "1.0.0",
+  "description": "Utility package to manage images on the Stream Deck Node SDK",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "stream-deck",
+    "elgato",
+    "stream-deck-plugin",
+    "image"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "publish": "npm publish --provenance"
+  },
+  "author": "fcannizzaro",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.2",
+    "@types/mime-types": "^2.1.4",
+    "@types/node": "^20.11.7"
+  },
+  "dependencies": {
+    "mime-types": "^2.1.35"
+  }
+}

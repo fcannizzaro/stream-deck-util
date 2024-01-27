@@ -1,0 +1,14 @@
+{
+  "name": "@fcannizzaro/stream-deck-util",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "turbo build",
+    "publish": "turbo publish"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.4",
+    "turbo": "^1.11.3",
+    "typescript": "^5.3.3"
+  }
+}

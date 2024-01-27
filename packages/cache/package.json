@@ -1,0 +1,28 @@
+{
+  "name": "@fcannizzaro/stream-deck-cache",
+  "version": "1.0.0",
+  "description": "Utility package to manage cache on the Stream Deck Node SDK",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "stream-deck",
+    "elgato",
+    "stream-deck-plugin",
+    "cache"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "publish": "npm publish --provenance"
+  },
+  "author": "fcannizzaro",
+  "license": "MIT",
+  "dependencies": {
+    "lru-cache": "^10.2.0",
+    "ms": "^2.1.3"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.2",
+    "@types/ms": "^0.7.34",
+    "@types/node": "^20.11.7"
+  }
+}

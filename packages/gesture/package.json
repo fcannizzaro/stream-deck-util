@@ -1,0 +1,23 @@
+{
+  "name": "@fcannizzaro/stream-deck-gesture",
+  "version": "1.0.0",
+  "description": "Utility package to manage gestures on the Stream Deck Node SDK",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "stream-deck",
+    "elgato",
+    "stream-deck-plugin",
+    "gestures"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "publish": "npm publish --provenance"
+  },
+  "author": "fcannizzaro",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.11.7"
+  }
+}
