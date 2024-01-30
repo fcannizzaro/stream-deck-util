@@ -11,5 +11,5 @@ Stream Deck Node plugin utility packages used in my plugins
 - [**@fcannizzaro/stream-deck-gesture**](https://github.com/fcannizzaro/stream-deck-util/tree/main/packages/gesture)
 
 - [**@fcannizzaro/stream-deck-image**](https://github.com/fcannizzaro/stream-deck-util/tree/main/packages/image)
-- 
+
 - [**@fcannizzaro/stream-deck-grid**](https://github.com/fcannizzaro/stream-deck-util/tree/main/packages/grid)
