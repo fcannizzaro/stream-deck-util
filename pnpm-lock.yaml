@@ -55,6 +55,21 @@ importers:
         specifier: ^20.11.7
         version: 20.11.7
 
+  packages/grid:
+    devDependencies:
+      '@elgato/streamdeck':
+        specifier: ^0.2.0
+        version: 0.2.0
+      '@total-typescript/ts-reset':
+        specifier: ^0.5.1
+        version: 0.5.1
+      '@tsconfig/node20':
+        specifier: ^20.1.2
+        version: 20.1.2
+      '@types/node':
+        specifier: ^20.11.7
+        version: 20.11.7
+
   packages/image:
     devDependencies:
       '@tsconfig/node20':
@@ -65,6 +80,20 @@ importers:
         version: 20.11.7
 
 packages:
+
+  /@elgato/streamdeck@0.2.0:
+    resolution: {integrity: sha512-Rt9b3Y132xjYeUM/w0pLBNmxrUaeHq8dmjFdW1ujODyzDu3Cd3T3clkj02em1K2vhUoVqmwu7rbVKUTfcz6ijA==}
+    engines: {node: ^20.5.1}
+    dependencies:
+      ws: 8.16.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+    dev: true
+
+  /@total-typescript/ts-reset@0.5.1:
+    resolution: {integrity: sha512-AqlrT8YA1o7Ff5wPfMOL0pvL+1X+sw60NN6CcOCqs658emD6RfiXhF7Gu9QcfKBH7ELY2nInLhKSCWVoNL70MQ==}
+    dev: true
 
   /@tsconfig/node20@20.1.2:
     resolution: {integrity: sha512-madaWq2k+LYMEhmcp0fs+OGaLFk0OenpHa4gmI4VEmCKX4PJntQ6fnnGADVFrVkBj0wIdAlQnK/MrlYTHsa1gQ==}
@@ -163,4 +192,17 @@ packages:
 
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
+
+  /ws@8.16.0:
+    resolution: {integrity: sha512-HS0c//TP7Ina87TfiPUz1rQzMhHrl/SG2guqRcTOIUYD2q8uhUdNHZYJUaQ8aTGPzCh+c6oawMKW35nFl1dxyQ==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
     dev: true

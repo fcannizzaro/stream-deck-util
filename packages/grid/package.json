@@ -1,0 +1,28 @@
+{
+  "name": "@fcannizzaro/stream-deck-grid",
+  "version": "1.0.0",
+  "description": "Utility package to manage dynamic grid profile on the Stream Deck Node SDK",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "stream-deck",
+    "elgato",
+    "stream-deck-plugin",
+    "grid"
+  ],
+  "repository": {
+    "url": "git+https://github.com/fcannizzaro/stream-deck-util.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "publish:package": "npm publish --provenance --access public"
+  },
+  "author": "fcannizzaro",
+  "license": "MIT",
+  "devDependencies": {
+    "@elgato/streamdeck": "^0.2.0",
+    "@total-typescript/ts-reset": "^0.5.1",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.11.7"
+  }
+}
