@@ -32,7 +32,6 @@ export const cycle = <const TItem, TCurrent extends CurrentType<TItem>>(
 ) => {
   const keys = available.map((item) => options.extractor?.(item) ?? item);
   const idx = Math.max(0, !current ? 0 : keys.indexOf(current));
-  return available[
-    mod(idx + (options.direction === "right" ? 1 : -1), available.length)
-  ] as TItem;
+  const next = (options.direction ?? "right") === "right";
+  return available[mod(idx + (next ? 1 : -1), available.length)] as TItem;
 };
