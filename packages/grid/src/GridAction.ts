@@ -16,7 +16,7 @@ export class GridAction extends SingletonAction {
 
   onWillDisappear(e: WillDisappearEvent<{}>) {
     const grid = getGrid(e);
-    grid?.unlink(e);
+    grid?.unlink();
   }
 
   onKeyUp(e: KeyUpEvent<{}>) {

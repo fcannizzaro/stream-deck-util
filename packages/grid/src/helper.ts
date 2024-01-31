@@ -1,9 +1,6 @@
 import { Action, ActionEvent } from "@elgato/streamdeck";
 import { EventEmitter } from "events";
-import {
-  ButtonPosition,
-  ResetAction, idxByPosition
-} from "./util/util";
+import { ButtonPosition, ResetAction, idxByPosition } from "./util/util";
 import { LockManager } from "./util/LockManager";
 import { PaginationManager } from "./util/PaginationManager";
 
@@ -251,9 +248,8 @@ export class GridHelper {
    * Unlinks a button
    * @param e the event with the action
    */
-  unlink(e: ActionEvent<any>) {
-    const idx = this.sub2Idx(e);
-    this.buttons[idx].action = undefined;
+  unlink() {
+    this.destroy();
   }
 
   /**
@@ -267,6 +263,10 @@ export class GridHelper {
    * Closes the grid
    */
   destroy() {
+    if (this.buttons.length === 0) {
+      return;
+    }
+    this.buttons = [];
     this.cells = [];
     this.events.removeAllListeners();
     this.destroyGrid();
