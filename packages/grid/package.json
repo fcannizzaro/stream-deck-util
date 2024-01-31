@@ -19,6 +19,10 @@
   },
   "author": "fcannizzaro",
   "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "devDependencies": {
     "@elgato/streamdeck": "^0.2.0",
     "@total-typescript/ts-reset": "^0.5.1",
