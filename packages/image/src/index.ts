@@ -37,7 +37,7 @@ export const downloadAsBase64 = async (url: string) => {
 export const toBase64 = (buffer: ArrayBuffer | null, type: string) => {
   if (!buffer) return "";
   const content = Buffer.from(buffer).toString("base64");
-  return `data:${type}";base64,${content}`;
+  return `data:${type};base64,${content}`;
 };
 
 /**
