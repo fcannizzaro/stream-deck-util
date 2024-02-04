@@ -137,10 +137,21 @@ export class GridHelper {
   /**
    * Fills the grid with the given cells
    * @param cells the cells to fill the grid with
+   * @param options the options
+   * @param options.keepPage if true, the current page is kept
    */
-  fill(cells: Cell[]) {
+  fill(
+    cells: Cell[],
+    options?: {
+      keepPage?: boolean;
+    }
+  ) {
     this.cells = cells;
-    this.pagination.reset();
+    if (options?.keepPage) {
+      this.reload();
+    } else {
+      this.pagination.reset();
+    }
   }
 
   /**
