@@ -25,6 +25,8 @@ export interface Cell {
   locked?: boolean;
 }
 
+const lastUpdates = new Map<string, number>();
+
 export type ActionCoordinates = {
   coordinates: {
     row: number;
@@ -182,6 +184,8 @@ export class GridHelper {
    * @param btn the button to render
    */
   async renderButton(btn: Cell) {
+    const now = Date.now();
+
     // the button is not yet linked to an action
     if (!btn.action) return;
 
@@ -197,6 +201,11 @@ export class GridHelper {
     // wait for the image to load
     const image = (await imageRes) ?? "";
 
+    // if the button is not updated in the meantime, update it
+    if (Number(lastUpdates.get(btn.id!)) > now) {
+      return;
+    }
+
     if (btn.layout) {
       btn.action.setFeedbackLayout(btn.layout);
       btn.action.setFeedback({
@@ -207,6 +216,8 @@ export class GridHelper {
       btn.action.setImage(image);
       btn.action.setTitle(btn.title);
     }
+
+    lastUpdates.set(btn.id!, Date.now());
   }
 
   /**
